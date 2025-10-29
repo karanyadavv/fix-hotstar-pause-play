@@ -1,8 +1,4 @@
 (() => {
-  const currentURL = window.location.href;
-  console.log("Current URL:", currentURL);
-  console.log(window.location.hostname);
-
   document.addEventListener(
     "keyup",
     (event) => {
@@ -12,28 +8,20 @@
         event.preventDefault();
         event.stopPropagation();
 
-        const players = document.querySelectorAll("video");
+        let players = document.querySelectorAll("video");
         if (!players.length) {
           console.log("No video elements found");
           return;
         }
-        console.log("what about here");
 
-        const player = players[0];
-        console.log("what about here now?");
-        if (player.paused == "true") {
-          console.log("are we here");
-          player.play();
-        } else if (player.paused == "false") {
-          console.log("are we here too?");
+        let player = players[0];
+        if (player.paused === false) {
           player.pause();
+        } else if (player.paused === true) {
+          player.play();
         }
       }
     },
     true
   );
 })();
-
-// const players = document.querySelectorAll('video');
-// console.log(players[0].paused);
-// players[0].play()
