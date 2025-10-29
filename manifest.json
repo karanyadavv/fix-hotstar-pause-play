@@ -1,0 +1,20 @@
+{
+  "name": "Fix Hotstar pause and play",
+  "description": "This extension fixes the default pause and play for Hotstar ",
+  "version": "1.0",
+  "manifest_version": 3,
+  "author": "Karan Yadav",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "icon.png",
+    "default_title": "Fix hotstar pause & play"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
