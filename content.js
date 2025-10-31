@@ -4,9 +4,6 @@
     (event) => {
       if (event.code === "Space") {
         console.log("Space pressed");
-        event.stopImmediatePropagation();
-        event.preventDefault();
-        event.stopPropagation();
 
         let players = document.querySelectorAll("video");
         if (!players.length) {
