@@ -17,7 +17,7 @@
         let player = players[0];
         if (!player.paused) {
           player.pause();
-        } else if (player.paused) {
+        } else {
           player.play();
         }
       }
